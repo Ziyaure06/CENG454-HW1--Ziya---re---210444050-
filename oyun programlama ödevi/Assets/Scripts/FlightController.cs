@@ -8,11 +8,13 @@ public class FlightController : MonoBehaviour
     [SerializeField] private float yawSpeed = 45f; // degrees/second
     [SerializeField] private float rollSpeed = 45f; // degrees/second
     [SerializeField] private float thrustSpeed = 5f; // units/second
-                                                     // TODO (Task 3-A): Declare a private Rigidbody field named 'rb'
+    private Rigidbody rb;         // TODO (Task 3-A): Declare a private Rigidbody field named 'rb'
     void Start()
     {
         // TODO (Task 3-B): Cache GetComponent<Rigidbody>() into 'rb'.
+        rb = GetComponent<Rigidbody>();
         // Then set rb.freezeRotation = true.
+        rb.freezeRotation = true;
         // Why is freezeRotation needed? Answer in your PDF.
     }
     void Update()// or FixedUpdate()
