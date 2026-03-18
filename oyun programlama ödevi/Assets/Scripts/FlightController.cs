@@ -47,7 +47,7 @@ public class FlightController : MonoBehaviour
         // TODO (Task 3-D):
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            transform.Translate(Vector3.forward * thrustSpeed * Time.deltaTime);
+            transform.Translate(Vector3.left * thrustSpeed * Time.deltaTime);
         }
     }
 }
